@@ -1,0 +1,149 @@
+\documentclass[a4paper]{article}
+
+\usepackage[
+    top=0.79in,
+    bottom=0.79in,
+    left=0.79in,
+    right=0.79in,
+]{geometry}
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{10pt}
+\newlength{\tablewidth}
+
+\setlist[itemize]{topsep=0em, itemsep=0.0em}
+\setlist[itemize,1]{before=\vspace{-1em}}
+
+\newenvironment{period}[2]{%
+\newcommand{\sarma}{#2}%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.75\tablewidth}>{\raggedleft\arraybackslash}p{0.25\tablewidth}@{}}%
+#1 \newline
+\begin{itemize}
+}{%
+\end{itemize} & \sarma \\%
+\end{tabular}\\
+}
+
+\newenvironment{blank-period}[2]{%
+\newcommand{\sarma}{#2}%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.75\tablewidth}>{\raggedleft\arraybackslash}p{0.25\tablewidth}@{}}%
+#1 \newline & \sarma \\%
+\end{tabular}\\
+}
+
+\newenvironment{projects}{%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.9\tablewidth}>{\raggedleft\arraybackslash}p{0.1\tablewidth}@{}}%
+}{%
+\end{tabular}
+}
+
+\newenvironment{skills}{%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.20\tablewidth}p{0.80\tablewidth}@{}}
+}{%
+\end{tabular}
+}
+
+\titleformat{\section}{\uppercase}{}{0pt}{}[{\vspace{0.5em}\titlerule}]
+\titleformat{\subsection}{\bf}{}{0pt}{}{}
+\titlespacing{\section}{0pt}{1em}{0.5em}
+\titlespacing{\subsection}{0pt}{0pt}{0.1em}
+
+\begin{document}
+\fontfamily{\sfdefault}
+\selectfont
+
+\begin{minipage}{.5\textwidth}
+\LARGE{Jan Kelemen}\\
+\normalsize{Jalkove\v{c}ka ulica 100A, Vara\v{z}din, 42000, Hrvatska}
+\normalsize{17/02/1995}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\raggedleft
+\href{mailto:jan.kelemen@fer.hr}{jan.kelemen@fer.hr} \\
+\href{mailto:jkeleme@gmail.com}{jkeleme@gmail.com} \\
++385 91 145 0612 \\
+\href{http://jan-kelemen.github.io/}{Web} | \href{https://github.com/jan-kelemen}{GitHub} | \href{https://gitlab.com/jan-kelemen}{GitLab}
+\end{minipage}
+
+\vspace{1em}
+
+\section{Radno iskustvo}
+\subsection{\href{http://www.evolva.hr/hr/index.html}{Evolva d.o.o.}, Vara\v{z}din, Hrvatska}
+\begin{period}{Pripravnik (Intern)}{22.08.2016. -- 23.09.2016.}
+	\item
+		Razvoj modula za \href{http://www.evolution-framework.com/}{Evolution framework}, koriste\'{c}i tehnologije: Java, PL/SQL
+\end{period}
+
+\section{Obrazovanje}
+\subsection{Sveu\v{c}ili\v{s}te u Zagrebu, Fakultet elektrotehnike i ra\v{c}unarstva, Hrvatska}
+\begin{period}{Magistar in\v{z}enjer ra\v{c}unarstva}{2016 -- trenutno}
+	\item profil:
+		\textit{Programsko in\v{z}enjerstvo i informacijski sustavi}
+	\item polo\v{z}ena vje\v{s}tina: 
+		\textit{Platforma Java i potporne tehnologije otvorenog koda u poslovnom okru\v{z}enju}
+	\item ostale aktivnosti:
+		\textit{Demonstrator na predmetu Razvoj primjenjene programske potpore}
+	\item va\v{z}niji predmeti:
+		\textit{Objektno oblikovanje},
+		\textit{Napredni modeli i baze podataka}
+\end{period}
+\begin{period}{Sveu\v{c}ili\v{s}ni prvostupnik (baccalaureus) in\v{z}enjer ra\v{c}unarstva}{2013 -- 2016}
+	\item modul:
+		\textit{Programsko in\v{z}enjerstvo i informacijski sustavi}
+	\item zavr\v{s}ni rad:
+		\textit{Programska podr\v{s}ka za pra\'{c}enje sredstava}
+	\item va\v{z}niji predmeti:
+		\textit{Baze podataka},
+		\textit{Oblikovni obrasci u programiranju},
+		\textit{Oblikovanje programske potpore},
+		\textit{Razvoj primjenjene programske potpore}
+\end{period}
+\subsection{Elektrostrojarska \v{s}kola, Vara\v{z}din}
+\begin{blank-period}{Tehni\v{c}ar za ra\v{c}unalstvo}{2009 -- 2013}
+\end{blank-period}
+
+\section{Projekti}
+\begin{projects}
+	\href{https://gitlab.com/jan-kelemen/oobl-seminar}{Sustav za dijeljenje informacija baziranih na trenutnoj lokaciji} (C\#, ASP.NET MVC, MSSQL) & 2017 \\
+	\href{https://gitlab.com/jan-kelemen/bio-inf}{Izgradnja binarnog stabla vali\'{c}a kao RRR strukture} (C++) & 2017 \\
+	\href{https://github.com/jan-kelemen/AssetHub}{Programska podr\v{s}ka za pra\'{c}enje sredstava} (C\#, ASP.NET MVC, MSSQL) & 2016 \\
+	Programska podr\v{s}ka za evidenciju aktivnosti fakulteta (C\#, ASP.NET MVC, MSSQL) & 2016 \\
+	\href{https://gitlab.com/jan-kelemen/ANewHopeee}{Web aplikacija za restoran} (C\#, ASP.NET MVC, MSSQL) & 2015 \\
+	Programska potpora za prikupljanje i pra\'{c}enje poslovnih biografija (Java, Spring, MySQL) & 2015 \\
+	\href{https://gitlab.com/jan-kelemen/p-p-j}{Jezi\v{c}ni procesor} (Java) & 2015 \\
+\end{projects}
+
+\section{Vje\v{s}tine}
+\begin{skills}
+	Programski jezici &
+	\begin{itemize}
+		\item \textbf{C++, C\#, Java, C} -- vrlo dobro poznavanje, kori\v{s}teni tijekom obrazovanja i na raznim projektima
+		\item \textbf{SQL, Python, JavaScript} -- osnovno poznavanje, kori\v{s}teni tijekom obrazovanja i na raznim projektima
+	\end{itemize} \\
+	Ostalo &
+	\begin{itemize}
+		\item \textbf{Git} -- vrlo dobro poznavanje, kori\v{s}ten tijekom obrazovanja i na raznim projektima
+	\end{itemize}
+\end{skills}
+
+\section{Ostale vje\v{s}tine}
+\begin{skills}
+    Jezici & Hrvatski (materinski), Engleski (te\v{c}no) \\
+    Voza\v{c}ka dozvola & B \\
+\end{skills}
+\end{document}

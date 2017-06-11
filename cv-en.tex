@@ -1,0 +1,149 @@
+\documentclass[a4paper]{article}
+
+\usepackage[
+    top=0.79in,
+    bottom=0.79in,
+    left=0.79in,
+    right=0.79in,
+]{geometry}
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{10pt}
+\newlength{\tablewidth}
+
+\setlist[itemize]{topsep=0em, itemsep=0.0em}
+\setlist[itemize,1]{before=\vspace{-1em}}
+
+\newenvironment{period}[2]{%
+\newcommand{\sarma}{#2}%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.75\tablewidth}>{\raggedleft\arraybackslash}p{0.25\tablewidth}@{}}%
+#1 \newline
+\begin{itemize}
+}{%
+\end{itemize} & \sarma \\%
+\end{tabular}\\
+}
+
+\newenvironment{blank-period}[2]{%
+\newcommand{\sarma}{#2}%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.75\tablewidth}>{\raggedleft\arraybackslash}p{0.25\tablewidth}@{}}%
+#1 \newline & \sarma \\%
+\end{tabular}\\
+}
+
+\newenvironment{projects}{%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.9\tablewidth}>{\raggedleft\arraybackslash}p{0.1\tablewidth}@{}}%
+}{%
+\end{tabular}
+}
+
+\newenvironment{skills}{%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.15\tablewidth}p{0.85\tablewidth}@{}}
+}{%
+\end{tabular}
+}
+
+\titleformat{\section}{\uppercase}{}{0pt}{}[{\vspace{0.5em}\titlerule}]
+\titleformat{\subsection}{\bf}{}{0pt}{}{}
+\titlespacing{\section}{0pt}{1em}{0.5em}
+\titlespacing{\subsection}{0pt}{0pt}{0.1em}
+
+\begin{document}
+\fontfamily{\sfdefault}
+\selectfont
+
+\begin{minipage}{.5\textwidth}
+\LARGE{Jan Kelemen}\\
+\normalsize{Jalkove\v{c}ka ulica 100A, Vara\v{z}din, 42000, Croatia}
+\normalsize{17/02/1995}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\raggedleft
+\href{mailto:jan.kelemen@fer.hr}{jan.kelemen@fer.hr} \\
+\href{mailto:jkeleme@gmail.com}{jkeleme@gmail.com} \\
++385 91 145 0612 \\
+\href{http://jan-kelemen.github.io/}{Web} | \href{https://github.com/jan-kelemen}{GitHub} | \href{https://gitlab.com/jan-kelemen}{GitLab}
+\end{minipage}
+
+\vspace{1em}
+
+\section{Work experience}
+\subsection{\href{http://www.evolva.hr/hr/index.html}{Evolva d.o.o.}, Vara\v{z}din, Croatia}
+\begin{period}{Intern}{22.08.2016. -- 23.09.2016.}
+	\item
+		Developing components for \href{http://www.evolution-framework.com/}{Evolution framework}, using Java, PL/SQL
+\end{period}
+
+\section{Education}
+\subsection{University of Zagreb, Faculty of Electrical Engineering and Computing, Croatia}
+\begin{period}{MSc in Computer Science}{2016 -- currently}
+	\item profile:
+		\textit{Software Engineering and Information Systems}
+	\item extracurricular courses: 
+		\textit{Java and Open Source technologies in the enterprise environment}
+	\item other activities:
+		\textit{Teaching assistant on Development of Software Applications course}
+	\item notable courses:
+		\textit{Object-oriented Design},
+		\textit{Advanced Databases}
+\end{period}
+\begin{period}{BSc in Computer Science}{2013 -- 2016}
+	\item module:
+		\textit{Software Engineering and Information Systems}
+	\item thesis:
+		\textit{Asset Tracking Software}
+	\item notable courses:
+		\textit{Databases},
+		\textit{Design Patterns in Software Design},
+		\textit{Software Design},
+		\textit{Development of Software Applications}
+\end{period}
+\subsection{Electromehanical school, Vara\v{z}din}
+\begin{blank-period}{Computer Engineer}{2009 -- 2013}
+\end{blank-period}
+
+\section{Projects}
+\begin{projects}
+	\href{https://gitlab.com/jan-kelemen/oobl-seminar}{Information sharing based on current location} (C\#, ASP.NET MVC, MSSQL) & 2017 \\
+	\href{https://gitlab.com/jan-kelemen/bio-inf}{Construction of binary wavelet trees using RRR structure} (C++) & 2017 \\
+	\href{https://github.com/jan-kelemen/AssetHub}{Asset Tracking Software} (C\#, ASP.NET MVC, MSSQL) & 2016 \\
+	College Management Software (C\#, ASP.NET MVC, MSSQL) & 2016 \\
+	\href{https://gitlab.com/jan-kelemen/ANewHopeee}{Restaurant Web Application} (C\#, ASP.NET MVC, MSSQL) & 2015 \\
+	Applicant Tracking Software (Java, Spring, MySQL) & 2015 \\
+	\href{https://gitlab.com/jan-kelemen/p-p-j}{Compiler} (Java) & 2015 \\
+\end{projects}
+
+\section{Skills}
+\begin{skills}
+	Programming languages &
+	\begin{itemize}
+		\item \textbf{C++, C\#, Java, C} -- intermediate, used during education and various projects
+		\item \textbf{SQL, Python, JavaScript} -- basic, used during education and various projects
+	\end{itemize} \\
+	Other &
+	\begin{itemize}
+		\item \textbf{Git} -- intermediate, used during education and various projects
+	\end{itemize}
+\end{skills}
+
+\section{Other skills}
+\begin{skills}
+    Languages & Croatian (native), English (fluent) \\
+    Driving license & B \\
+\end{skills}
+\end{document}
