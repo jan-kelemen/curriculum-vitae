@@ -42,14 +42,6 @@
 \end{tabular}\\
 }
 
-\newenvironment{projects}{%
-\setlength{\tablewidth}{\linewidth}
-\addtolength{\tablewidth}{-2\tabcolsep}
-\begin{tabular}{@{}p{0.9\tablewidth}>{\raggedleft\arraybackslash}p{0.1\tablewidth}@{}}%
-}{%
-\end{tabular}
-}
-
 \newenvironment{skills}{%
 \setlength{\tablewidth}{\linewidth}
 \addtolength{\tablewidth}{-2\tabcolsep}
@@ -69,14 +61,14 @@
 
 \begin{minipage}{.5\textwidth}
 \LARGE{Jan Kelemen}\\
-\normalsize{Zagreb, 10000, Croatia / Vara\v{z}din, 42000, Croatia}
+\normalsize{Zagreb, 10000, Croatia}
 \normalsize{17/02/1995}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 \raggedleft
 \href{mailto:jkeleme@gmail.com}{jkeleme@gmail.com} \\
 +385 91 145 0612 \\
-\href{http://jan-kelemen.github.io/}{Web} | \href{https://github.com/jan-kelemen}{GitHub} | \href{https://gitlab.com/jan-kelemen}{GitLab}
+\href{http://jan-kelemen.github.io/}{Web} | \href{https://github.com/jan-kelemen}{GitHub}
 \end{minipage}
 
 \vspace{1em}
@@ -85,9 +77,13 @@
 \subsection{\href{https://www.avl.com/}{AVL AST d.o.o.}, Zagreb, Croatia}
 \begin{period}{Software Development Engineer}{17.07.2017. -- currently}
         \item
-                Maintenance and development of measurement result storage and replication components
+                Development of test procedure executor in embedded environment using C++
+        \item
+                Development of real time components using C++
+        \item
+                Maintenance and development of measurement result storage and replication components using C++ and .NET
 	\item
-		Development of framework for offline parametrization using .NET framework
+		Development of framework for offline parametrization using .NET Framework
 \end{period}
 \subsection{\href{http://www.evolva.hr/hr/index.html}{Evolva d.o.o.}, Vara\v{z}din, Croatia}
 \begin{period}{Intern}{22.08.2016. -- 23.09.2016.}
@@ -111,31 +107,22 @@
 \begin{blank-period}{Computer Engineer}{2009 -- 2013}
 \end{blank-period}
 
-\section{Projects}
-\begin{projects}
-	\href{https://github.com/jan-kelemen/scrummy}{Scrum Project Management Tool} (C\#, .NET Core, MongoDB) & 2018 \\
-	\href{https://gitlab.com/jan-kelemen/oobl-seminar}{Information sharing based on current location} (C\#, .NET, MSSQL) & 2016 \\
-	\href{https://gitlab.com/jan-kelemen/bio-inf}{Construction of binary wavelet trees using RRR structure} (C++) & 2016 \\
-	\href{https://github.com/jan-kelemen/AssetHub}{Asset Tracking Software} (C\#, .NET, MSSQL) & 2016 \\
-	\href{https://gitlab.com/jan-kelemen/ANewHopeee}{Restaurant Web Application} (C\#, .NET, MSSQL) & 2015 \\
-	\href{https://gitlab.com/jan-kelemen/p-p-j}{Compiler} (Java) & 2015 \\
-\end{projects}
-
 \section{Skills}
 \begin{skills}
 	Programming languages &
 	\begin{itemize}
                 \item \textbf{C++, C\#} -- advanced
-		\item \textbf{Java, C} -- intermediate
-		\item \textbf{Rust, SQL, Python, JavaScript} -- basic
+		\item \textbf{SQL, Java, C} -- intermediate
+		\item \textbf{Rust, Python, TypeScript} -- basic
 	\end{itemize} \\
         Databases &
         \begin{itemize}
-                \item \textbf{Oracle, MSSQL, Mongo} -- basic
+                \item \textbf{Oracle} -- intermediate
+                \item \textbf{PostgreSQL, MSSQL, Mongo} -- basic
         \end{itemize} \\
 	Other &
 	\begin{itemize}
-		\item \textbf{Git} -- intermediate
+		\item \textbf{CMake, Git} -- intermediate
 	\end{itemize}
 \end{skills}
 
